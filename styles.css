@@ -1,0 +1,311 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #f1f1f1;
+    background-image: url('assets/8716e3132117797.622858d67e865.png'), url('assets/0fb3aafcafc8828df3c32d9af4dffaa6.jpg'); /* Two background images */
+    background-position: top center, bottom center;
+    background-size: cover;
+    background-attachment: fixed; /* Fix the background during scroll */
+    animation: scrollBackgroundTop 30s linear infinite, scrollBackgroundBottom 40s linear infinite; /* Animation for both backgrounds */
+    height: 200vh; /* Increased height for scrolling */
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #0f0f0f;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #00ffcc;
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #00ffcc;
+    margin-bottom: 20px;
+}
+
+.expertise ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expertise li {
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+.projects {
+    padding: 50px 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 32px;
+    color: #00ffcc;
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 255, 204, 0.5);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #0f0f0f;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #111;
+}
+
+.services h2 {
+    font-size: 32px;
+    color: #00ffcc;
+    margin-bottom: 30px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.service-card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 255, 204, 0.5);
+}
+
+.service-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #f1f1f1;
+    font-size: 16px;
+}
+
+
+/* Moving top background image */
+@keyframes scrollBackgroundTop {
+    0% {
+        background-position: top center;
+    }
+    100% {
+        background-position: bottom center; /* Moves top image from top to bottom */
+    }
+}
+
+/* Moving bottom background image */
+@keyframes scrollBackgroundBottom {
+    0% {
+        background-position: bottom center;
+    }
+    100% {
+        background-position: top center; /* Moves bottom image from bottom to top */
+    }
+}
+
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Styling */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0.9); /* Slight transparency for the background */
+    margin-top: 50px;
+}
+
+.services h2 {
+    font-size: 32px;
+    color: #00ffcc;
+    margin-bottom: 30px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.service-card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 255, 204, 0.5);
+}
+
+.service-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #f1f1f1;
+    font-size: 16px;
+}
+
+/* Mobile (phones) */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .services-container,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card,
+    .project-card {
+        width: 100%;
+    }
+
+    .service-img,
+    .project-card img {
+        height: 150px;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .services-container,
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card,
+    .project-card {
+        width: 100%;
+    }
+}
