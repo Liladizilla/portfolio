@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-10",
+  "projects": [
+    {
+      "name": "Dedus Mobile OS",
+      "category": "Operating systems / low-level",
+      "status": "ARM64 kernel research; QEMU target, not yet installable on retail phones",
+      "repository": "https://github.com/Liladizilla/mobile_os_01",
+      "pullRequest": "https://github.com/Liladizilla/mobile_os_01/pull/1",
+      "ci": "https://github.com/Liladizilla/mobile_os_01/actions"
+    },
+    {
+      "name": "AdizillaAI",
+      "category": "AI application",
+      "status": "Live",
+      "live": "https://adizillaai.vercel.app/"
+    },
+    {
+      "name": "Synced 3D Multiview",
+      "category": "3D / web",
+      "status": "Live",
+      "live": "https://synced-3d-multiview.vercel.app/",
+      "repository": "https://github.com/Liladizilla/synced_3d_multiview"
+    },
+    {
+      "name": "Cyberzilla",
+      "category": "Web / cyberpunk UI",
+      "status": "Live",
+      "live": "https://cyberzilla01.pp.ua/",
+      "alternateLive": "https://frabjous-unicorn-0c4b7c.netlify.app/"
+    },
+    {
+      "name": "Bounty Servant",
+      "category": "Automation / developer tools",
+      "status": "In development",
+      "repository": "https://github.com/Liladizilla/bounty_servant"
+    },
+    {
+      "name": "CharisOS",
+      "category": "Operating systems / low-level",
+      "status": "Experimental x86_64 OS",
+      "repository": "https://github.com/Liladizilla/charis__OS"
+    },
+    {
+      "name": "NEXUS_PRO / Odysseus",
+      "category": "AI app builder",
+      "status": "In development",
+      "repository": "https://github.com/Liladizilla/NEXUS_PRO_01"
+    }
+  ]
+}
