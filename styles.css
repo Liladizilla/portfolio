@@ -7,10 +7,12 @@
 .project-visual > .site-shot { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: top center; display: block; background: var(--panel); }
 .project-visual > .visual-index { z-index: 2; }
 .project-visual:has(.site-shot)::after { content: ""; position: absolute; inset: 45% 0 0; z-index: 1; pointer-events: none; background: linear-gradient(0deg, rgba(7,9,15,.86), transparent); }
-.project-visual:has(.site-shot) > .visual-window,
-.project-visual:has(.site-shot) > .sculpture,
-.project-visual:has(.site-shot) > .cyber-grid,
-.project-visual:has(.site-shot) > .cyber-word { display: none; }
+.project-visual.has-live-shot > .visual-window,
+.project-visual.has-live-shot > .sculpture,
+.project-visual.has-live-shot > .cyber-grid,
+.project-visual.has-live-shot > .cyber-word { display: none; }
+.project-visual.shot-failed > .site-shot { display: none; }
+.project-visual.shot-failed::after { display: none; }
 .project-info { min-width: 0; overflow-wrap: anywhere; }
 .project-links a { min-height: 28px; display: inline-flex; align-items: center; }
 img { max-width: 100%; }
