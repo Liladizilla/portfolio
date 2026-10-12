@@ -65,11 +65,11 @@
       try {
         await navigator.clipboard.writeText(value);
         copyButton.textContent = "Copied";
-        copyFeedback.textContent = "Profile link copied.";
+        copyFeedback.textContent = value.includes("@") ? "Email address copied." : "Profile link copied.";
       } catch (_) {
         copyFeedback.textContent = value;
       }
-      window.setTimeout(() => { copyButton.textContent = "Copy profile link"; }, 1800);
+      window.setTimeout(() => { copyButton.textContent = value.includes("@") ? "Copy email address" : "Copy profile link"; }, 1800);
     });
   }
 
