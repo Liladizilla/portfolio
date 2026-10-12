@@ -1,52 +1,70 @@
 {
-  "schemaVersion": 1,
-  "updatedAt": "2026-10-10",
+  "schemaVersion": 2,
+  "updatedAt": "2026-10-12",
   "projects": [
     {
-      "name": "Dedus Mobile OS",
-      "category": "Operating systems / low-level",
-      "status": "ARM64 kernel research; QEMU target, not yet installable on retail phones",
-      "repository": "https://github.com/Liladizilla/mobile_os_01",
-      "pullRequest": "https://github.com/Liladizilla/mobile_os_01/pull/1",
-      "ci": "https://github.com/Liladizilla/mobile_os_01/actions"
-    },
-    {
       "name": "AdizillaAI",
-      "category": "AI application",
+      "category": "AI workspace / web application",
       "status": "Live",
-      "live": "https://adizillaai.vercel.app/"
+      "live": "https://adizillaai.vercel.app/",
+      "repository": "https://github.com/Liladizilla/adizillaAI",
+      "featured": true,
+      "summary": "A personal AI workspace focused on conversation and agent-oriented workflows.",
+      "visual": "project-visual visual-ai"
     },
     {
       "name": "Synced 3D Multiview",
-      "category": "3D / web",
+      "category": "Interactive 3D / web",
       "status": "Live",
       "live": "https://synced-3d-multiview.vercel.app/",
-      "repository": "https://github.com/Liladizilla/synced_3d_multiview"
+      "repository": "https://github.com/Liladizilla/synced_3d_multiview",
+      "featured": true,
+      "summary": "An interactive Three.js studio with procedural forms and synchronized camera perspectives.",
+      "visual": "project-visual visual-3d"
     },
     {
       "name": "Cyberzilla",
-      "category": "Web / cyberpunk UI",
+      "category": "Web / visual design",
       "status": "Live",
       "live": "https://cyberzilla01.pp.ua/",
-      "alternateLive": "https://frabjous-unicorn-0c4b7c.netlify.app/"
-    },
-    {
-      "name": "Bounty Servant",
-      "category": "Automation / developer tools",
-      "status": "In development",
-      "repository": "https://github.com/Liladizilla/bounty_servant"
+      "alternateLive": "https://frabjous-unicorn-0c4b7c.netlify.app/",
+      "repository": "https://github.com/Liladizilla?tab=repositories",
+      "featured": true,
+      "summary": "A dark cyberpunk-inspired web experience.",
+      "visual": "project-visual visual-cyber"
     },
     {
       "name": "CharisOS",
       "category": "Operating systems / low-level",
       "status": "Experimental x86_64 OS",
-      "repository": "https://github.com/Liladizilla/charis__OS"
+      "repository": "https://github.com/Liladizilla/charis__OS",
+      "featured": true,
+      "summary": "A from-scratch operating-system experiment using C, NASM, Multiboot2, and GRUB.",
+      "visual": "project-visual visual-os"
     },
     {
       "name": "NEXUS_PRO / Odysseus",
-      "category": "AI app builder",
+      "category": "Developer tools / software builder",
       "status": "In development",
-      "repository": "https://github.com/Liladizilla/NEXUS_PRO_01"
+      "repository": "https://github.com/Liladizilla/NEXUS_PRO_01",
+      "summary": "A software-building workspace with project files, previews, authentication, and agent workflows.",
+      "visual": "project-visual visual-nexus"
+    },
+    {
+      "name": "Bounty Servant",
+      "category": "Automation / developer tools",
+      "status": "In development",
+      "repository": "https://github.com/Liladizilla/bounty_servant",
+      "summary": "Tooling for discovering and organizing open-source bounty opportunities.",
+      "visual": "project-visual visual-bounty"
+    },
+    {
+      "name": "Dedus Mobile OS",
+      "category": "Operating systems / ARM64",
+      "status": "Research stage",
+      "repository": "https://github.com/Liladizilla/mobile_os_01",
+      "summary": "ARM64 kernel research including early boot, serial shell, device-tree discovery, and memory-management work.",
+      "ci": "https://github.com/Liladizilla/mobile_os_01/actions"
     }
   ]
 }
