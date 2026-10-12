@@ -1,58 +1,184 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="system">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090b10">
-  <meta name="description" content="Charis Chara — software engineer building web products, developer tools, 3D experiences, automation, and low-level systems.">
+  <meta name="theme-color" content="#11100e">
+  <meta name="description" content="Charis Chara builds web products, interactive 3D tools, automation, and low-level systems. Selected projects and engineering notes.">
   <meta property="og:title" content="Charis Chara — Software Engineer">
-  <meta property="og:description" content="Selected software projects, experiments, and engineering work.">
+  <meta property="og:description" content="Web products, interactive 3D, automation, and systems work.">
   <meta property="og:type" content="website">
-  <title>Charis Chara — Software Engineer</title>
+  <meta property="og:url" content="https://liladizilla.github.io/portfolio/">
+  <meta property="og:image" content="https://image.thum.io/get/width/1200/crop/750/noanimate/https://synced-3d-multiview.vercel.app/">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://liladizilla.github.io/portfolio/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <title>Charis Chara — Software Engineer</title>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Charis Chara","url":"https://liladizilla.github.io/portfolio/","sameAs":["https://github.com/Liladizilla"],"jobTitle":"Software Engineer","knowsAbout":["Web development","Interactive 3D","Automation","Operating systems","Developer tools"]}
+  </script>
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <nav class="nav shell" aria-label="Main navigation">
-    <a class="wordmark" href="#top"><span class="mark">C.</span><span>CHARIS CHARA</span></a>
-    <div class="nav-links"><a href="#work">Work</a><a href="#about">About</a><a href="#stack">Stack</a><a href="https://github.com/Liladizilla" target="_blank" rel="noreferrer">GitHub ↗</a></div>
-  </nav>
-  <main id="top">
-    <section class="hero shell">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="Charis Chara home">Charis Chara<span class="wordmark-period">.</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="#work">Work</a><a href="#index">Project index</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a href="https://github.com/Liladizilla" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme"><span class="theme-glyph" aria-hidden="true">◐</span><span class="theme-label">Theme</span></button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> SOFTWARE ENGINEER / INDEPENDENT BUILDER</p>
-        <h1>I turn complex ideas into <span class="gradient-text">working software.</span></h1>
-        <p class="hero-intro">I build across the stack: web products, developer tools, interactive 3D, automation, and low-level systems. I care about how software works and how it feels to use.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#work">Explore selected work <span>↘</span></a><a class="button button-quiet" href="https://github.com/Liladizilla" target="_blank" rel="noreferrer">Browse GitHub ↗</a></div>
-        <div class="hero-meta"><span>WEB & PRODUCT ENGINEERING</span><span>3D & GRAPHICS</span><span>SYSTEMS</span></div>
+        <p class="kicker">SOFTWARE ENGINEER · INDEPENDENT BUILDER</p>
+        <h1 id="hero-title">I build web products, 3D tools, and <span>systems from scratch.</span></h1>
+        <p class="hero-intro">I'm Charis. I work across the product interface and the machinery underneath it, from browser-based tools to an x86_64 operating-system project.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">See selected work <span aria-hidden="true">↓</span></a>
+          <a class="text-link email-link" href="https://github.com/Liladizilla" target="_blank" rel="noreferrer">Reach me on GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="now-line"><span class="now-marker" aria-hidden="true"></span><span><strong>Currently building:</strong> CharisOS, Odysseus, and tools for developer workflows.</span></p>
       </div>
-      <div class="hero-art" aria-label="Abstract geometric illustration">
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
-        <div class="core"><span>C</span><i></i></div>
-        <div class="art-label label-top">BUILD / ITERATE</div><div class="art-label label-bottom">IDEAS → SYSTEMS</div>
+      <figure class="hero-art">
+        <a class="hero-art-link" href="https://synced-3d-multiview.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open the live Synced 3D Multiview project">
+          <img src="https://image.thum.io/get/width/1100/crop/900/noanimate/https://synced-3d-multiview.vercel.app/" alt="Live browser screenshot of the Synced 3D Multiview interactive graphics project" width="1100" height="900" fetchpriority="high">
+          <span class="image-caption"><span>01 / LIVE ARTIFACT</span><span>Synced 3D Multiview ↗</span></span>
+        </a>
+        <figcaption>A real project, not a decorative illustration.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section shell" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div><p class="kicker">SELECTED WORK</p><h2 id="work-title">A few things I've built.</h2></div>
+        <p class="section-intro">Different layers of the same curiosity: useful interfaces, interactive graphics, and the software below the surface.</p>
+      </div>
+
+      <div class="featured-list">
+        <article class="featured-project">
+          <a class="project-media" href="https://adizillaai.vercel.app/" target="_blank" rel="noreferrer" aria-label="Visit AdizillaAI live">
+            <img src="https://image.thum.io/get/width/1200/crop/750/noanimate/https://adizillaai.vercel.app/" alt="Screenshot of the live AdizillaAI web application" width="1200" height="750" loading="lazy">
+            <span class="media-corner">01</span>
+          </a>
+          <div class="project-copy">
+            <p class="project-meta">LIVE PRODUCT · WEB APP</p>
+            <h3><a href="https://adizillaai.vercel.app/" target="_blank" rel="noreferrer">AdizillaAI <span aria-hidden="true">↗</span></a></h3>
+            <p>A web AI workspace for conversation and agent workflows. I’m building the product around a clear split between everyday chat and tasks that need a more structured workflow.</p>
+            <p class="project-result"><strong>What it demonstrates</strong> Product UI, API integration, and the work of turning multiple AI capabilities into one interface.</p>
+            <ul class="stack-line" aria-label="Technology areas"><li>Web application</li><li>API integration</li><li>Agent workflows</li></ul>
+            <div class="project-actions"><a href="https://adizillaai.vercel.app/" target="_blank" rel="noreferrer">Live product ↗</a><a href="https://github.com/Liladizilla/adizillaAI" target="_blank" rel="noreferrer">Source code ↗</a></div>
+          </div>
+        </article>
+
+        <article class="featured-project featured-reverse">
+          <a class="project-media" href="https://github.com/Liladizilla/charis__OS" target="_blank" rel="noreferrer" aria-label="Open CharisOS source repository">
+            <img src="https://image.thum.io/get/width/1200/crop/750/noanimate/https://github.com/Liladizilla/charis__OS" alt="Screenshot of the public CharisOS source repository and project documentation" width="1200" height="750" loading="lazy">
+            <span class="media-corner">02</span>
+          </a>
+          <div class="project-copy">
+            <p class="project-meta">SYSTEMS · ACTIVE EXPERIMENT</p>
+            <h3><a href="https://github.com/Liladizilla/charis__OS" target="_blank" rel="noreferrer">CharisOS <span aria-hidden="true">↗</span></a></h3>
+            <p>An x86_64 operating-system project written with C and NASM, starting at the boot flow and working toward kernel, memory, and hardware-facing components.</p>
+            <p class="project-result"><strong>Why it matters</strong> It takes the work below the application layer out of the abstract and into a codebase that can be built, tested, and extended.</p>
+            <ul class="stack-line" aria-label="Technology stack"><li>C</li><li>NASM</li><li>Multiboot2</li><li>GRUB</li></ul>
+            <div class="project-actions"><a href="https://github.com/Liladizilla/charis__OS" target="_blank" rel="noreferrer">Source & build notes ↗</a></div>
+          </div>
+        </article>
+
+        <article class="featured-project">
+          <a class="project-media" href="https://synced-3d-multiview.vercel.app/" target="_blank" rel="noreferrer" aria-label="Visit Synced 3D Multiview live">
+            <img src="https://image.thum.io/get/width/1200/crop/750/noanimate/https://synced-3d-multiview.vercel.app/" alt="Screenshot of the live Synced 3D Multiview studio" width="1200" height="750" loading="lazy">
+            <span class="media-corner">03</span>
+          </a>
+          <div class="project-copy">
+            <p class="project-meta">INTERACTIVE GRAPHICS · LIVE DEMO</p>
+            <h3><a href="https://synced-3d-multiview.vercel.app/" target="_blank" rel="noreferrer">Synced 3D Multiview <span aria-hidden="true">↗</span></a></h3>
+            <p>A browser-based 3D studio for procedural forms and synchronized camera perspectives, built to explore how multiple views can work together.</p>
+            <p class="project-result"><strong>What it demonstrates</strong> Interactive graphics, browser rendering, and coordinating state across multiple views.</p>
+            <ul class="stack-line" aria-label="Technology stack"><li>Three.js</li><li>3D interaction</li><li>Browser graphics</li></ul>
+            <div class="project-actions"><a href="https://synced-3d-multiview.vercel.app/" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/Liladizilla/synced_3d_multiview" target="_blank" rel="noreferrer">Source code ↗</a></div>
+          </div>
+        </article>
+
+        <article class="featured-project featured-reverse">
+          <a class="project-media" href="https://cyberzilla01.pp.ua/" target="_blank" rel="noreferrer" aria-label="Visit Cyberzilla live">
+            <img src="https://image.thum.io/get/width/1200/crop/750/noanimate/https://cyberzilla01.pp.ua/" alt="Screenshot of the live Cyberzilla website" width="1200" height="750" loading="lazy">
+            <span class="media-corner">04</span>
+          </a>
+          <div class="project-copy">
+            <p class="project-meta">WEB EXPERIENCE · LIVE</p>
+            <h3><a href="https://cyberzilla01.pp.ua/" target="_blank" rel="noreferrer">Cyberzilla <span aria-hidden="true">↗</span></a></h3>
+            <p>A cyberpunk-inspired website with a deliberately dark, high-contrast visual identity and a custom frontend presentation.</p>
+            <p class="project-result"><strong>Focus</strong> Visual consistency, responsive layouts, and a distinct identity without losing usability.</p>
+            <ul class="stack-line" aria-label="Project focus"><li>Frontend</li><li>Visual design</li><li>Responsive UI</li></ul>
+            <div class="project-actions"><a href="https://cyberzilla01.pp.ua/" target="_blank" rel="noreferrer">Live site ↗</a><a href="https://github.com/Liladizilla/trix" target="_blank" rel="noreferrer">Source code ↗</a></div>
+          </div>
+        </article>
       </div>
     </section>
-    <section class="ticker" aria-label="Areas of work"><div class="ticker-track"><span>FULL-STACK ENGINEERING</span><b>✳</b><span>INTERACTIVE 3D</span><b>✳</b><span>DEVELOPER TOOLING</span><b>✳</b><span>LOW-LEVEL SYSTEMS</span><b>✳</b><span>FULL-STACK ENGINEERING</span><b>✳</b><span>INTERACTIVE 3D</span><b>✳</b><span>DEVELOPER TOOLING</span></div></section>
-    <section id="work" class="section shell">
-      <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h2>Projects with a point of view.</h2></div><p class="section-note">A curated set of live products and engineering experiments. Each card links to the real project or its source.</p></div>
-      <div id="project-grid" class="project-grid">
-        <article class="project-card project-featured"><a class="project-visual visual-ai" href="https://adizillaai.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open AdizillaAI"><img class="site-shot" src="https://image.thum.io/get/width/1200/crop/750/noanimate/https://adizillaai.vercel.app/" alt="Screenshot of the live AdizillaAI interface" loading="lazy" onload="this.parentElement.classList.add('has-live-shot')" onerror="this.parentElement.classList.add('shot-failed')"><div class="visual-window"><div class="window-bar"><i></i><i></i><i></i><span>adizillaai / workspace</span></div><div class="mock-layout"><div class="mock-sidebar"><b>◈</b><i></i><i></i><i></i></div><div class="mock-chat"><small>PERSONAL WORKSPACE</small><b>Think beyond.</b><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-prompt">Ask anything <span>↗</span></div></div></div></div><span class="visual-index">01 / PRODUCT</span></a><div class="project-info"><div class="project-title-line"><h3>AdizillaAI</h3><span class="status live">LIVE</span></div><p>A personal AI workspace for focused conversation and agent-oriented workflows, with a product experience designed around user control.</p><div class="tags"><span>Web app</span><span>API integration</span><span>Product UX</span></div><div class="project-links"><a href="https://adizillaai.vercel.app/" target="_blank" rel="noreferrer">Live product ↗</a><a href="https://github.com/Liladizilla/adizillaAI" target="_blank" rel="noreferrer">Source ↗</a></div></div></article>
-        <article class="project-card"><a class="project-visual visual-3d" href="https://synced-3d-multiview.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open Synced 3D Multiview"><img class="site-shot" src="https://image.thum.io/get/width/1200/crop/750/noanimate/https://synced-3d-multiview.vercel.app/" alt="Screenshot of the live Synced 3D Multiview studio" loading="lazy" onload="this.parentElement.classList.add('has-live-shot')" onerror="this.parentElement.classList.add('shot-failed')"><div class="sculpture"><div class="sculpture-ring ring-one"></div><div class="sculpture-ring ring-two"></div><div class="sculpture-ring ring-three"></div><div class="sculpture-core"></div></div><span class="visual-index">02 / GRAPHICS</span></a><div class="project-info"><div class="project-title-line"><h3>Synced 3D Multiview</h3><span class="status live">LIVE</span></div><p>A browser-based 3D studio with procedural forms and synchronized camera views.</p><div class="tags"><span>Three.js</span><span>3D interaction</span></div><div class="project-links"><a href="https://synced-3d-multiview.vercel.app/" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/Liladizilla/synced_3d_multiview" target="_blank" rel="noreferrer">Source ↗</a></div></div></article>
-        <article class="project-card"><a class="project-visual visual-cyber" href="https://cyberzilla01.pp.ua/" target="_blank" rel="noreferrer" aria-label="Open Cyberzilla"><img class="site-shot" src="https://image.thum.io/get/width/1200/crop/750/noanimate/https://cyberzilla01.pp.ua/" alt="Screenshot of the live Cyberzilla website" loading="lazy" onload="this.parentElement.classList.add('has-live-shot')" onerror="this.parentElement.classList.add('shot-failed')"><div class="cyber-grid"></div><div class="cyber-word">CYBER<span>ZILLA</span><i>01</i></div><span class="visual-index">03 / WEB</span></a><div class="project-info"><div class="project-title-line"><h3>Cyberzilla</h3><span class="status live">LIVE</span></div><p>A dark cyberpunk web experience with a bold visual system and high-contrast interface.</p><div class="tags"><span>Frontend</span><span>Visual design</span><span>Responsive UI</span></div><div class="project-links"><a href="https://cyberzilla01.pp.ua/" target="_blank" rel="noreferrer">Live site ↗</a><a href="https://github.com/Liladizilla?tab=repositories" target="_blank" rel="noreferrer">Explore source ↗</a></div></div></article>
-        <article class="project-card"><a class="project-visual visual-os" href="https://github.com/Liladizilla/charis__OS" target="_blank" rel="noreferrer" aria-label="Open CharisOS source"><div class="terminal"><div class="terminal-head"><span>charisos / kernel</span><span>● ● ●</span></div><div class="terminal-body"><p><em>root@charisos</em>:~$ boot</p><p class="terminal-green">[ ok ] multiboot2 entry</p><p class="terminal-green">[ ok ] kernel memory map</p><p class="terminal-green">[ ok ] serial console</p><p class="terminal-muted">x86_64 / C / NASM</p><b>_</b></div></div><span class="visual-index">04 / SYSTEMS</span></a><div class="project-info"><div class="project-title-line"><h3>CharisOS</h3><span class="status research">EXPERIMENTAL</span></div><p>A from-scratch x86_64 OS exploring boot flow, kernel foundations, memory, and hardware-facing code.</p><div class="tags"><span>C</span><span>NASM</span><span>Multiboot2</span><span>GRUB</span></div><div class="project-links"><a href="https://github.com/Liladizilla/charis__OS" target="_blank" rel="noreferrer">Source & build notes ↗</a></div></div></article>
-        <article class="project-card"><a class="project-visual visual-nexus" href="https://github.com/Liladizilla/NEXUS_PRO_01" target="_blank" rel="noreferrer" aria-label="Open NEXUS PRO source"><div class="nexus-panel"><span>ODYSSEUS / WORKSPACE</span><div class="nexus-columns"><i></i><div><b>Project workspace</b><small>Build · Preview · Review</small><div class="nexus-bars"><i></i><i></i><i></i></div></div></div></div><span class="visual-index">05 / DEVELOPER TOOLS</span></a><div class="project-info"><div class="project-title-line"><h3>NEXUS_PRO / Odysseus</h3><span class="status build">IN DEVELOPMENT</span></div><p>A software-building workspace bringing project files, previews, and agent workflows into one interface.</p><div class="tags"><span>Web application</span><span>Auth</span><span>Workflow design</span></div><div class="project-links"><a href="https://github.com/Liladizilla/NEXUS_PRO_01" target="_blank" rel="noreferrer">Source ↗</a></div></div></article>
-        <article class="project-card"><a class="project-visual visual-bounty" href="https://github.com/Liladizilla/bounty_servant" target="_blank" rel="noreferrer" aria-label="Open Bounty Servant source"><div class="bounty-dashboard"><div class="dash-top"><span>BOUNTY SERVANT</span><span>● MONITOR</span></div><div class="dash-metric"><small>OPEN OPPORTUNITIES</small><b>DISCOVER <span>→</span></b></div><div class="dash-row"><i></i><i></i><i></i></div><div class="dash-row"><i></i><i></i><i></i></div></div><span class="visual-index">06 / AUTOMATION</span></a><div class="project-info"><div class="project-title-line"><h3>Bounty Servant</h3><span class="status build">IN DEVELOPMENT</span></div><p>Developer tooling for finding and organizing open-source bounty opportunities and related workflows.</p><div class="tags"><span>GitHub</span><span>Automation</span><span>CI</span></div><div class="project-links"><a href="https://github.com/Liladizilla/bounty_servant" target="_blank" rel="noreferrer">Source ↗</a></div></div></article>
+
+    <section class="index-section" id="index" aria-labelledby="index-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div><p class="kicker">THE REST OF THE WORK</p><h2 id="index-title">Project index.</h2></div>
+          <p class="section-intro">Work in progress belongs here too. Its status is clear, and the source is one click away.</p>
+        </div>
+        <div class="project-table-wrap">
+          <table class="project-table">
+            <thead><tr><th scope="col">Project</th><th scope="col">What it is</th><th scope="col">Focus</th><th scope="col">Status / Link</th></tr></thead>
+            <tbody>
+              <tr data-preview="https://image.thum.io/get/width/700/crop/500/noanimate/https://github.com/Liladizilla/NEXUS_PRO_01"><th scope="row"><a href="https://github.com/Liladizilla/NEXUS_PRO_01" target="_blank" rel="noreferrer">NEXUS_PRO / Odysseus ↗</a></th><td>A software-building workspace for projects, previews, and agent workflows.</td><td>Web product · Auth · Workflow</td><td><a class="index-status" href="https://github.com/Liladizilla/NEXUS_PRO_01" target="_blank" rel="noreferrer">In development ↗</a></td></tr>
+              <tr data-preview="https://image.thum.io/get/width/700/crop/500/noanimate/https://github.com/Liladizilla/bounty_servant"><th scope="row"><a href="https://github.com/Liladizilla/bounty_servant" target="_blank" rel="noreferrer">Bounty Servant ↗</a></th><td>A developer tool for discovering and organizing open-source bounty opportunities.</td><td>GitHub · Automation · CI</td><td><a class="index-status" href="https://github.com/Liladizilla/bounty_servant" target="_blank" rel="noreferrer">In development ↗</a></td></tr>
+              <tr data-preview="https://image.thum.io/get/width/700/crop/500/noanimate/https://github.com/Liladizilla/mobile_os_01"><th scope="row"><a href="https://github.com/Liladizilla/mobile_os_01" target="_blank" rel="noreferrer">Dedus Mobile OS ↗</a></th><td>Early ARM64 operating-system research around boot, serial shell, and memory.</td><td>ARM64 · Kernel research</td><td><a class="index-status" href="https://github.com/Liladizilla/mobile_os_01" target="_blank" rel="noreferrer">Research ↗</a></td></tr>
+              <tr data-preview="https://image.thum.io/get/width/700/crop/500/noanimate/https://github.com/Liladizilla"><th scope="row"><a href="https://github.com/Liladizilla?tab=repositories" target="_blank" rel="noreferrer">More experiments ↗</a></th><td>Additional product explorations and prototypes, kept in the public repository list.</td><td>Product exploration</td><td><a class="index-status" href="https://github.com/Liladizilla?tab=repositories" target="_blank" rel="noreferrer">Browse repositories ↗</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hover-preview" id="hover-preview" aria-hidden="true"><img alt="" src=""><span>PROJECT PREVIEW</span></div>
       </div>
-      <p class="project-footnote">Status labels are intentional: live applications, active development, and research projects are not presented as interchangeable.</p>
     </section>
-    <section id="about" class="about-section"><div class="shell about-grid"><div><p class="eyebrow">02 / APPROACH</p><h2>Curious about the whole stack.</h2></div><div class="about-copy"><p>I like moving between the visible parts of a product and the systems underneath. That means refining a chat interface one day, building an interactive 3D tool the next, and debugging a boot sequence when the problem demands it.</p><p>The common thread is craft: thoughtful interfaces, understandable architecture, useful automation, and software that behaves the way people expect it to.</p><a class="text-link" href="https://github.com/Liladizilla?tab=repositories" target="_blank" rel="noreferrer">More projects on GitHub ↗</a></div></div></section>
-    <section id="stack" class="section shell stack-section"><div class="section-heading"><div><p class="eyebrow">03 / TOOLKIT</p><h2>Tools for different layers.</h2></div><p class="section-note">A practical toolkit across product engineering, graphics, automation, and systems research.</p></div><div class="stack-grid"><div class="stack-card"><span>01</span><h3>Languages</h3><p>JavaScript · TypeScript · Python · Java · C · NASM · SQL</p></div><div class="stack-card"><span>02</span><h3>Web & backend</h3><p>Node.js · Django · REST APIs · authentication · database-backed applications</p></div><div class="stack-card"><span>03</span><h3>Graphics & UX</h3><p>Three.js · interactive 3D · responsive UI · prototyping · Godot</p></div><div class="stack-card"><span>04</span><h3>Systems & delivery</h3><p>Linux · Git · GitHub Actions · CI/CD · QEMU · kernel experiments</p></div></div></section>
-    <section class="contact-section"><div class="shell contact-inner"><p class="eyebrow">HAVE A GOOD PROBLEM?</p><h2>Let's build something<br><span class="gradient-text">worth using.</span></h2><div class="hero-actions"><a class="button button-primary" href="https://github.com/Liladizilla" target="_blank" rel="noreferrer">Connect on GitHub ↗</a><a class="button button-quiet" href="#top">Back to top ↑</a></div></div></section>
+
+    <section class="section about-section shell" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <div><p class="kicker">A LITTLE CONTEXT</p><h2 id="about-title">I like knowing what happens underneath.</h2></div>
+        <div class="about-copy">
+          <p>I'm a software developer who moves between product interfaces and the systems beneath them. Some days that means shaping an AI workspace or a browser-based 3D tool. Other days it means working through boot code, memory maps, and the details a framework usually hides.</p>
+          <p>I care about clear architecture, understandable interactions, useful documentation, and reliable builds. I prefer shipping a small working slice, learning from it, and improving it over presenting a concept as if it were already finished.</p>
+          <p class="about-note">My public work is the best record of what I'm learning and building now.</p>
+          <a class="text-link" href="https://github.com/Liladizilla?tab=repositories" target="_blank" rel="noreferrer">Explore the source repositories ↗</a>
+        </div>
+      </div>
+      <div class="principles">
+        <div><span>01</span><p><strong>Build end to end.</strong> Connect interface, logic, data, and deployment.</p></div>
+        <div><span>02</span><p><strong>Make the trade-offs visible.</strong> Explain the choices that shape the result.</p></div>
+        <div><span>03</span><p><strong>Keep the status honest.</strong> A prototype and a live product are different things.</p></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-inner">
+        <p class="kicker">CONTACT</p>
+        <h2 id="contact-title">Have a concrete problem?<br><span>Let's talk about it.</span></h2>
+        <p class="contact-copy">GitHub is the public contact route for now. It also gives you direct access to the code behind the projects above.</p>
+        <div class="hero-actions"><a class="button button-primary" href="https://github.com/Liladizilla" target="_blank" rel="noreferrer">Connect on GitHub <span aria-hidden="true">↗</span></a><button class="button button-secondary" id="copy-profile" type="button" data-copy="https://github.com/Liladizilla">Copy profile link</button></div>
+        <p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></p>
+      </div>
+    </section>
   </main>
-  <footer class="footer shell"><a class="wordmark" href="#top"><span class="mark">C.</span><span>CHARIS CHARA</span></a><span>Designed and built with intention · 2026</span><a href="https://github.com/Liladizilla" target="_blank" rel="noreferrer">GitHub ↗</a></footer>
+
+  <footer class="site-footer shell">
+    <a class="wordmark" href="#top">Charis Chara<span class="wordmark-period">.</span></a>
+    <p>Last updated October 2026</p>
+    <a href="https://github.com/Liladizilla" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </footer>
   <script src="script.js" defer></script>
 </body>
 </html>
